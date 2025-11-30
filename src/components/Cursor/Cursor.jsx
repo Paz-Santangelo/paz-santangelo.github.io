@@ -4,8 +4,24 @@ import './Cursor.css';
 const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [isHovering, setIsHovering] = useState(false);
+    const [isTouchDevice, setIsTouchDevice] = useState(false);
 
     useEffect(() => {
+        // Detectar si es un dispositivo táctil
+        const checkTouchDevice = () => {
+            return (
+                'ontouchstart' in window ||
+                navigator.maxTouchPoints > 0 ||
+                navigator.msMaxTouchPoints > 0
+            );
+        };
+
+        setIsTouchDevice(checkTouchDevice());
+
+        // Si es dispositivo táctil, no configurar eventos
+        if (checkTouchDevice()) {
+            return;
+        }
         const updatePosition = (e) => {
             setPosition({ x: e.clientX, y: e.clientY });
         };
@@ -34,6 +50,11 @@ const Cursor = () => {
             });
         };
     }, []);
+
+    // No renderizar el cursor en dispositivos táctiles
+    if (isTouchDevice) {
+        return null;
+    }
 
     return (
         <div

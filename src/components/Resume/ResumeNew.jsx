@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -12,12 +13,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.vers
 const pdf = "/assets/CV_PazSantangelo_Backend.pdf";
 
 const ResumeNew = () => {
-    const [width, setWidth] = useState(1200);
+    const [width, setWidth] = useState(() => window.innerWidth);
     const [numPages, setNumPages] = useState(null);
-
-    useEffect(() => {
-        setWidth(window.innerWidth);
-    }, []);
 
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);

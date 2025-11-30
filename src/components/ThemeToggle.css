@@ -1,0 +1,76 @@
+.theme-toggle {
+    background: transparent;
+    border: 1.5px solid var(--border-glass-pink);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 2px;
+    position: relative;
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: var(--bg-button-base);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.theme-toggle:hover::before {
+    opacity: 1;
+}
+
+.theme-toggle:hover {
+    border-color: var(--border-glass-pink-strong);
+    transform: scale(1.05);
+}
+
+.theme-icon {
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.sun-icon {
+    color: #fbbf24;
+}
+
+.moon-icon {
+    color: var(--color-accent-purple-light);
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: rotate(15deg);
+    filter: drop-shadow(0 0 8px currentColor);
+}
+
+/* Animación de rotación al cambiar */
+.theme-toggle:active .theme-icon {
+    transform: rotate(180deg);
+}
+
+/* Ajustes para modo claro */
+[data-theme="light"] .theme-toggle {
+    border-color: var(--border-glass-blue);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    border-color: var(--border-glass-blue-strong);
+}
+
+[data-theme="light"] .moon-icon {
+    color: var(--color-accent-purple-dark);
+}

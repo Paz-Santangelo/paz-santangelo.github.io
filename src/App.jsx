@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -13,17 +13,16 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Cursor from "./components/Cursor/Cursor";
-import Experience from './components/Experience/Experience';
-import Projects from './components/Projects/Projects';
-import ResumeNew from './components/Resume/ResumeNew';
+import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
+import ResumeNew from "./components/Resume/ResumeNew";
 import Preloader from "./components/Pre";
-import { useLenis } from './hooks/useLenis';
+import { useLenis } from "./hooks/useLenis";
+import ThemeToggle from "./components/ThemeToggle";
 
 function App() {
-
   const [load, upadateLoad] = useState(true);
 
-  // Inicializar Lenis para scroll suave
   useLenis();
 
   useEffect(() => {
@@ -41,6 +40,9 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
         <ScrollToTop />
+        <div className="theme-toggle-mobile">
+          <ThemeToggle />
+        </div>
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -54,7 +56,7 @@ function App() {
         <Footer />
       </div>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

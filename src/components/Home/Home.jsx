@@ -7,7 +7,6 @@ const Home = () => {
     return (
         <section>
             <Container fluid className="home-section" id="home">
-                {/* Círculos de gradiente decorativos */}
                 <div className="gradient-circle-1"></div>
                 <div className="gradient-circle-2"></div>
                 <div className="gradient-circle-3"></div>

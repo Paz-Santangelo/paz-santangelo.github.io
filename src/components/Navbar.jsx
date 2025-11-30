@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Navbar as NavbarBS } from "react-bootstrap";
 import { Nav as NavBS } from "react-bootstrap";
 import { Container as ContainerBS } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 import {
     AiOutlineHome,
@@ -11,6 +12,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { MdWorkOutline } from "react-icons/md";
 
 const Navbar = () => {
     const [expand, updateExpanded] = useState(false);
@@ -48,14 +50,14 @@ const Navbar = () => {
                 <NavbarBS.Collapse id="responsive-navbar-nav">
                     <NavBS className="ms-auto" defaultActiveKey="#home">
                         <NavBS.Item>
-                            <NavBS.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+                            <NavBS.Link as={NavLink} to="/" onClick={() => updateExpanded(false)} end>
                                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
                             </NavBS.Link>
                         </NavBS.Item>
 
                         <NavBS.Item>
                             <NavBS.Link
-                                as={Link}
+                                as={NavLink}
                                 to="/about"
                                 onClick={() => updateExpanded(false)}
                             >
@@ -65,17 +67,17 @@ const Navbar = () => {
 
                         <NavBS.Item>
                             <NavBS.Link
-                                as={Link}
+                                as={NavLink}
                                 to="/experience"
                                 onClick={() => updateExpanded(false)}
                             >
-                                <AiOutlineUser style={{ marginBottom: "2px" }} /> Experiencia
+                                <MdWorkOutline style={{ marginBottom: "2px" }} /> Experiencia
                             </NavBS.Link>
                         </NavBS.Item>
 
                         <NavBS.Item>
                             <NavBS.Link
-                                as={Link}
+                                as={NavLink}
                                 to="/project"
                                 onClick={() => updateExpanded(false)}
                             >
@@ -88,12 +90,16 @@ const Navbar = () => {
 
                         <NavBS.Item>
                             <NavBS.Link
-                                as={Link}
+                                as={NavLink}
                                 to="/resume"
                                 onClick={() => updateExpanded(false)}
                             >
                                 <CgFileDocument style={{ marginBottom: "2px" }} /> Mi CV
                             </NavBS.Link>
+                        </NavBS.Item>
+
+                        <NavBS.Item className="theme-toggle-nav-item theme-toggle-desktop">
+                            <ThemeToggle />
                         </NavBS.Item>
                     </NavBS>
                 </NavbarBS.Collapse>
@@ -102,4 +108,4 @@ const Navbar = () => {
     );
 }
 
-export default Navbar
+export default Navbar;

@@ -12,6 +12,7 @@ body {
 
 #root {
     min-height: 100vh;
+    background-color: var(--bg-primary);
 }
 
 .App {
@@ -19,27 +20,31 @@ body {
     flex-direction: column;
     min-height: 100vh;
     text-align: center;
+    background-color: var(--bg-primary);
 }
 
 main {
     padding-top: 67.97px;
+    background-color: var(--bg-primary);
 }
 
 /* ========================================
    VARIABLES CSS GLOBALES - SISTEMA DE COLORES
    ======================================== */
+
+/* --- COLORES BASE (Compartidos entre temas) --- */
 :root {
-    /* --- Colores Base --- */
+    /* Colores Base */
     --color-black: #000000;
     --color-white: #ffffff;
     --color-white-soft: rgb(250, 250, 250);
 
-    /* --- Colores Primarios del Gradiente --- */
+    /* Colores Primarios del Gradiente */
     --color-primary-pink: #f86bdf;
     --color-primary-blue: #6b6bf8;
     --color-primary-purple: #b16beb;
 
-    /* --- Colores de Acento (Violetas/Púrpuras) --- */
+    /* Colores de Acento (Violetas/Púrpuras) */
     --color-accent-purple-light: #e08fec;
     --color-accent-lavender: #b8a3e6;
     --color-accent-lavender-soft: #c9a3e6;
@@ -48,13 +53,28 @@ main {
     --color-accent-purple-darker: #6a1b9a;
     --color-accent-purple-deepest: #24042b;
 
-    /* --- Fondos Oscuros --- */
+    /* Gradientes (Comunes) */
+    --gradient-main: linear-gradient(135deg, #f86bdf 0%, #6b6bf8 100%);
+    --gradient-main-alt: linear-gradient(135deg, var(--color-primary-pink) 0%, var(--color-primary-blue) 100%);
+
+    /* Opacidades Comunes */
+    --opacity-medium: 0.7;
+    --opacity-high: 0.8;
+    --opacity-low: 0.93;
+}
+
+/* ========================================
+   TEMA OSCURO (Dark Mode) - Por defecto
+   ======================================== */
+:root,
+[data-theme="dark"] {
+    /* --- Fondos --- */
     --bg-primary: #000000;
     --bg-preloader: #0c0513;
     --bg-navbar-sticky: #1b1a2ea9;
     --bg-navbar-mobile: rgba(0, 0, 0, 0.85);
     --bg-scrollbar-track: rgba(0, 0, 0, 0.3);
-    --bg-footer: rgb(10, 4, 22);
+    --bg-footer: #000000;
     --bg-card-hover: rgba(156, 89, 182, 0.164);
     --bg-card-base: rgba(255, 255, 255, 0.027);
     --bg-tech-icon-hover: rgba(155, 89, 182, 0.12);
@@ -65,10 +85,6 @@ main {
     /* --- Colores de Scrollbar --- */
     --scrollbar-thumb: rgba(224, 143, 236, 0.4);
     --scrollbar-thumb-hover: rgba(224, 143, 236, 0.7);
-
-    /* --- Gradientes --- */
-    --gradient-main: linear-gradient(135deg, #f86bdf 0%, #6b6bf8 100%);
-    --gradient-main-alt: linear-gradient(135deg, var(--color-primary-pink) 0%, var(--color-primary-blue) 100%);
 
     /* --- Círculos de Glassmorphism (Gradientes Radiales) --- */
     --gradient-circle-pink-blue: radial-gradient(circle, rgba(248, 107, 223, 0.25) 0%, rgba(107, 107, 248, 0.15) 100%);
@@ -108,15 +124,76 @@ main {
     --text-light-gray: #ececec;
     --text-important: var(--color-accent-purple-light);
 
-    /* --- Opacidades Comunes --- */
-    --opacity-medium: 0.7;
-    --opacity-high: 0.8;
-    --opacity-low: 0.93;
-
     /* --- Variables de Sección (para compatibilidad) --- */
     --section-background-color: var(--bg-primary);
     --image-gradient: var(--bg-primary);
     --imp-text-color: var(--color-accent-purple-light);
+}
+
+/* ========================================
+   TEMA CLARO (Light Mode)
+   ======================================== */
+[data-theme="light"] {
+    /* --- Fondos --- */
+    --bg-primary: #ffffff;
+    --bg-preloader: #f5f0fa;
+    --bg-navbar-sticky: rgba(255, 255, 255, 0.85);
+    --bg-navbar-mobile: rgba(255, 255, 255, 0.95);
+    --bg-scrollbar-track: rgba(200, 200, 200, 0.3);
+    --bg-footer: #f8f8f8;
+    --bg-card-hover: rgba(156, 89, 182, 0.08);
+    --bg-card-base: rgba(248, 107, 223, 0.04);
+    --bg-tech-icon-hover: rgba(155, 89, 182, 0.08);
+    --bg-button-base: rgba(139, 79, 163, 0.15);
+    --bg-button-hover: rgba(120, 51, 148, 0.2);
+    --bg-resume-title: rgba(177, 107, 235, 0.12);
+
+    /* --- Colores de Scrollbar --- */
+    --scrollbar-thumb: rgba(177, 107, 235, 0.4);
+    --scrollbar-thumb-hover: rgba(177, 107, 235, 0.7);
+
+    /* --- Círculos de Glassmorphism (Gradientes Radiales) - Más visibles --- */
+    --gradient-circle-pink-blue: radial-gradient(circle, rgba(248, 107, 223, 0.32) 0%, rgba(107, 107, 248, 0.24) 100%);
+    --gradient-circle-blue-pink: radial-gradient(circle, rgba(107, 107, 248, 0.32) 0%, rgba(248, 107, 223, 0.24) 100%);
+    --gradient-circle-pink-blue-medium: radial-gradient(circle, rgba(248, 107, 223, 0.35) 0%, rgba(107, 107, 248, 0.26) 100%);
+    --gradient-circle-blue-pink-light: radial-gradient(circle, rgba(107, 107, 248, 0.34) 0%, rgba(248, 107, 223, 0.25) 100%);
+    --gradient-circle-photo-blob: radial-gradient(circle, rgba(248, 107, 223, 0.28) 0%, rgba(107, 107, 248, 0.20) 100%);
+
+    /* --- Bordes y Sombras de Glassmorphism --- */
+    --border-glass-pink: rgba(248, 107, 223, 0.25);
+    --border-glass-pink-light: rgba(248, 107, 223, 0.2);
+    --border-glass-pink-strong: rgba(248, 107, 223, 0.35);
+    --border-glass-blue: rgba(107, 107, 248, 0.2);
+    --border-glass-blue-strong: rgba(107, 107, 248, 0.3);
+    --border-card: rgba(156, 89, 182, 0.2);
+    --border-card-subtle: rgba(0, 0, 0, 0.08);
+    --border-card-hover: rgba(156, 89, 182, 0.3);
+    --border-tech-icon-hover: rgba(177, 107, 235, 0.5);
+
+    /* --- Sombras (Box Shadows) - Más sutiles y oscuras --- */
+    --shadow-glass-pink-outer: 0 0 40px rgba(248, 107, 223, 0.2);
+    --shadow-glass-pink-inner: inset 0 0 40px rgba(177, 107, 235, 0.08);
+    --shadow-glass-blue-outer: 0 0 50px rgba(107, 107, 248, 0.18);
+    --shadow-glass-blue-inner: inset 0 0 50px rgba(177, 107, 235, 0.06);
+    --shadow-glass-pink-medium-outer: 0 0 30px rgba(248, 107, 223, 0.22);
+    --shadow-glass-pink-medium-inner: inset 0 0 30px rgba(177, 107, 235, 0.1);
+    --shadow-glass-blue-small-outer: 0 0 30px rgba(107, 107, 248, 0.2);
+    --shadow-glass-blue-small-inner: inset 0 0 30px rgba(177, 107, 235, 0.08);
+    --shadow-photo-blob-outer: 0 0 40px rgba(248, 107, 223, 0.15);
+    --shadow-photo-blob-inner: inset 0 0 40px rgba(177, 107, 235, 0.06);
+    --shadow-profile-photo: 0 0 50px rgba(169, 85, 247, 0.15);
+    --shadow-tech-icon-hover: 0 0 15px rgba(177, 107, 235, 0.3);
+
+    /* --- Colores de Texto --- */
+    --text-primary: #2d2d2d;
+    --text-white: #1a1a1a;
+    --text-light-gray: #404040;
+    --text-important: var(--color-accent-purple-dark);
+
+    /* --- Variables de Sección (para compatibilidad) --- */
+    --section-background-color: var(--bg-primary);
+    --image-gradient: var(--bg-primary);
+    --imp-text-color: var(--color-accent-purple-dark);
 }
 
 /* ========================================

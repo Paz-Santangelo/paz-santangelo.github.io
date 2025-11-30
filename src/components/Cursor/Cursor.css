@@ -16,3 +16,26 @@
     height: 40px;
     background-color: rgba(205, 135, 214, 0.5);
 }
+
+/* Cursor para modo claro */
+[data-theme="light"] .custom-cursor {
+    background-color: rgba(139, 79, 163, 0.7);
+    mix-blend-mode: multiply;
+}
+
+[data-theme="light"] .custom-cursor.hovering {
+    background-color: rgba(139, 79, 163, 0.55);
+}
+
+/* Ocultar cursor personalizado en dispositivos táctiles/móviles */
+@media (pointer: coarse) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
