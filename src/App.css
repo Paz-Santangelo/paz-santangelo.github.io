@@ -707,11 +707,10 @@ button:focus {
 /* Quote en modo claro */
 [data-theme="light"] .quote-text {
     color: var(--color-accent-purple-dark);
-    font-weight: 600;
 }
 
 [data-theme="light"] .blockquote-footer {
-    color: var(--color-accent-purple-medium) !important;
+    color: var(--color-accent-purple-dark) !important;
 }
 
 .tech-icons {

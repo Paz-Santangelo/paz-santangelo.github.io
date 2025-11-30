@@ -1,0 +1,21 @@
+# robots.txt para Portfolio de Paz Santangelo
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://tu-dominio.com/sitemap.xml
+
+# Rastreadores específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Bloquear directorios innecesarios (si los tienes)
+Disallow: /api/
+Disallow: /*.json$

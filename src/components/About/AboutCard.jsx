@@ -7,18 +7,19 @@ const AboutCard = () => {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            ¡Hola! Soy <span className="purple">Paz Santangelo</span>,
-            Desarrolladora Backend especializada en{" "}
-            <strong>Java, Spring Boot y Spring Cloud</strong>. Tengo experiencia
-            construyendo <strong>APIs REST</strong> robustas, integrando bases
-            de datos como <strong>MySQL</strong> y <strong>PostgreSQL</strong>,
-            y también poseo conocimientos en <strong>Frontend</strong> con
+            ¡Hola! Soy <b className="purple">Paz Santangelo</b>, Desarrolladora
+            Backend especializada en <b className="purple">Java</b>,{" "}
+            <b className="purple">Spring Boot</b> y{" "}
+            <b className="purple">Spring Cloud</b>. Tengo experiencia
+            construyendo <b className="purple">APIs REST</b> robustas, integrando bases
+            de datos como <b className="purple">MySQL</b> y <b className="purple">PostgreSQL</b>,
+            y también poseo conocimientos en <b className="purple">Frontend</b> con
             React, Bootstrap y Material UI.
             <br />
             <br />
             Me apasiona diseñar soluciones escalables y eficientes, aplicando
             buenas prácticas, patrones de diseño y metodologías ágiles como{" "}
-            <strong>Scrum</strong>.
+            <b className="purple">Scrum</b>.
             <br />
             <br />
             Fuera del código, soy una persona curiosa, organizada y siempre

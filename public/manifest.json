@@ -1,0 +1,26 @@
+{
+  "name": "Paz Santangelo - Portfolio",
+  "short_name": "PS Portfolio",
+  "description": "Portfolio profesional de Paz Santangelo - Desarrolladora Backend Java/Spring Boot",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0416",
+  "theme_color": "#8B4FA3",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dnw0mx8qr/image/upload/v1764196622/Logo-Siglas-SF_xyyrgr.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://res.cloudinary.com/dnw0mx8qr/image/upload/v1764196622/Logo-Siglas-SF_xyyrgr.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "es-ES"
+}
