@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://tu-dominio.com/sitemap.xml
+Sitemap: https://paz-santangelo.github.io/portfolio-paz/sitemap.xml
 
 # Rastreadores específicos
 User-agent: Googlebot

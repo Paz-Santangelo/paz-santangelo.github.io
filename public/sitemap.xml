@@ -3,7 +3,7 @@
   
   <!-- Página Principal / Home -->
   <url>
-    <loc>https://tu-dominio.com/</loc>
+    <loc>https://paz-santangelo.github.io/portfolio-paz/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,7 +11,7 @@
   
   <!-- Página About -->
   <url>
-    <loc>https://tu-dominio.com/about</loc>
+    <loc>https://paz-santangelo.github.io/portfolio-paz/about</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -19,7 +19,7 @@
   
   <!-- Página Experience -->
   <url>
-    <loc>https://tu-dominio.com/experience</loc>
+    <loc>https://paz-santangelo.github.io/portfolio-paz/experience</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -27,7 +27,7 @@
   
   <!-- Página Projects -->
   <url>
-    <loc>https://tu-dominio.com/project</loc>
+    <loc>https://paz-santangelo.github.io/portfolio-paz/project</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -35,7 +35,7 @@
   
   <!-- Página Resume -->
   <url>
-    <loc>https://tu-dominio.com/resume</loc>
+    <loc>https://paz-santangelo.github.io/portfolio-paz/resume</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
