@@ -12,15 +12,6 @@ const Experience = () => {
       startDate: "Septiembre 2023",
       endDate: "Julio 2025",
     },
-    {
-      id: 2,
-      jobTitle: "Desarrolladora Full Stack",
-      company: "G&L Group",
-      description:
-        "Desarrollo y mantenimiento de aplicaciones web utilizando React.js, Spring Boot y bases de datos SQL. Integración de APIs y optimización del rendimiento.",
-      startDate: "Septiembre 2023",
-      endDate: "Julio 2025",
-    },
   ];
 
   return (
