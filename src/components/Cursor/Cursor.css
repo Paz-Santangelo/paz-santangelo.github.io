@@ -27,6 +27,30 @@
     background-color: rgba(139, 79, 163, 0.55);
 }
 
+/* Cursor sobre PDF - mejor contraste en modo oscuro */
+.custom-cursor.over-pdf {
+    background-color: rgba(139, 79, 163, 0.85);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    mix-blend-mode: normal;
+}
+
+.custom-cursor.over-pdf.hovering {
+    background-color: rgba(139, 79, 163, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+}
+
+/* Cursor sobre PDF en modo claro */
+[data-theme="light"] .custom-cursor.over-pdf {
+    background-color: rgba(100, 61, 144, 0.9);
+    border: 2px solid rgba(100, 61, 144, 0.5);
+    mix-blend-mode: normal;
+}
+
+[data-theme="light"] .custom-cursor.over-pdf.hovering {
+    background-color: rgba(100, 61, 144, 0.8);
+    border: 2px solid rgba(100, 61, 144, 0.6);
+}
+
 /* Ocultar cursor personalizado en dispositivos táctiles/móviles */
 @media (pointer: coarse) {
     .custom-cursor {

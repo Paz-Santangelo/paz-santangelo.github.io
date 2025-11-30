@@ -1,6 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@400;500;700&display=swap");
 
 /* ========================================
+   ESTILOS GLOBALES
+   ======================================== */
+* {
+    font-family: "Hind", sans-serif;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: var(--section-background-color);
+    color: var(--text-white);
+    cursor: none;
+}
+
+a,
+button,
+.btn,
+input,
+textarea,
+select {
+    cursor: none !important;
+}
+
+/* ========================================
    ESTILOS ESTRUCTURALES DE LA APLICACIÓN
    ======================================== */
 html,
@@ -194,29 +219,4 @@ main {
     --section-background-color: var(--bg-primary);
     --image-gradient: var(--bg-primary);
     --imp-text-color: var(--color-accent-purple-dark);
-}
-
-/* ========================================
-   ESTILOS GLOBALES
-   ======================================== */
-* {
-    font-family: "Hind", sans-serif;
-}
-
-body {
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-image: var(--section-background-color);
-    color: var(--text-white);
-    cursor: none;
-}
-
-a,
-button,
-.btn,
-input,
-textarea,
-select {
-    cursor: none !important;
 }

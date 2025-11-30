@@ -1079,6 +1079,21 @@ button:focus {
     position: relative;
 }
 
+/* Flechas de navegación del PDF */
+.pdf-nav-arrow:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(184, 163, 230, 0.4);
+}
+
+/* Flechas de navegación en modo claro */
+[data-theme="light"] .pdf-nav-arrow {
+    background: var(--color-accent-purple-dark) !important;
+}
+
+[data-theme="light"] .pdf-nav-arrow:hover:not(:disabled) {
+    box-shadow: 0 4px 15px rgba(138, 73, 168, 0.4);
+}
+
 .resume .resume-item .resume-title {
     line-height: 18px;
     font-size: 0.9em;
