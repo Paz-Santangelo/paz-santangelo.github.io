@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
@@ -16,6 +15,12 @@ const ResumeNew = () => {
   const [width, setWidth] = useState(() => window.innerWidth);
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
@@ -47,13 +52,13 @@ const ResumeNew = () => {
         {/* Contenedor del PDF con flechas de navegación */}
         <div style={{ 
           display: "flex", 
-          flexDirection: "row", 
+          flexDirection: "row",
           alignItems: "center", 
           justifyContent: "center", 
-          padding: "50px 20px",
-          gap: "30px",
+          padding: width > 767 ? "50px 20px" : width > 426 ? "30px 5px" : "20px 3px",
+          gap: width > 767 ? "30px" : width > 426 ? "10px" : "5px",
           maxWidth: "100%",
-          overflow: "hidden"
+          overflow: "visible"
         }}>
           {/* Flecha izquierda */}
           {numPages > 1 && (
@@ -72,15 +77,15 @@ const ResumeNew = () => {
                 padding: "0",
                 flexShrink: 0,
                 borderRadius: "50%",
-                width: "45px",
-                height: "45px",
+                width: width > 767 ? "45px" : width > 426 ? "35px" : "28px",
+                height: width > 767 ? "45px" : width > 426 ? "35px" : "28px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 transition: "all 0.3s ease",
               }}
             >
-              <AiOutlineLeft style={{ fontSize: "1.5rem" }} />
+              <AiOutlineLeft style={{ fontSize: width > 767 ? "1.5rem" : width > 426 ? "1rem" : "0.8rem" }} />
             </Button>
           )}
 
@@ -89,8 +94,10 @@ const ResumeNew = () => {
             display: "flex", 
             justifyContent: "center", 
             alignItems: "center",
-            maxWidth: "60%",
-            overflow: "hidden" 
+            width: "auto",
+            maxWidth: width > 767 ? "60%" : width > 426 ? "calc(100% - 80px)" : "calc(100% - 66px)",
+            overflow: "visible",
+            flex: "0 1 auto",
           }}>
             <Document
               file={pdf}
@@ -99,8 +106,10 @@ const ResumeNew = () => {
             >
               <Page
                 pageNumber={pageNumber}
-                scale={width > 786 ? 1.2 : 0.45}
+                scale={width > 786 ? 1.2 : width > 448 ? 0.6 : width > 426 ? 0.5 : 0.38}
                 className="pdf-page"
+                renderTextLayer={false}
+                renderAnnotationLayer={false}
               />
             </Document>
           </div>
@@ -122,15 +131,15 @@ const ResumeNew = () => {
                 padding: "0",
                 flexShrink: 0,
                 borderRadius: "50%",
-                width: "45px",
-                height: "45px",
+                width: width > 767 ? "45px" : width > 426 ? "35px" : "28px",
+                height: width > 767 ? "45px" : width > 426 ? "35px" : "28px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 transition: "all 0.3s ease",
               }}
             >
-              <AiOutlineRight style={{ fontSize: "1.5rem" }} />
+              <AiOutlineRight style={{ fontSize: width > 767 ? "1.5rem" : width > 426 ? "1rem" : "0.8rem" }} />
             </Button>
           )}
         </div>
