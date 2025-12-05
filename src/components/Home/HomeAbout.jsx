@@ -55,10 +55,6 @@ const HomeAbout = () => {
         <Row>
           <Col md={12} className="home-about-social">
             <h1>ENCUÉNTRAME EN</h1>
-            <p>
-              Siéntete libre de<span className="purple"> conectarte </span>
-              conmigo
-            </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
@@ -81,6 +77,10 @@ const HomeAbout = () => {
                 </a>
               </li>
             </ul>
+            <p>
+              Siéntete libre de<span className="purple"> conectarte </span>
+              conmigo
+            </p>
           </Col>
         </Row>
       </Container>
