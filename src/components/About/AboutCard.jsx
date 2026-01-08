@@ -6,7 +6,7 @@ const AboutCard = () => {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
+          <p style={{ textAlign: "left" }} className="about-card-text">
             ¡Hola! Soy <b className="purple">Paz Santangelo</b>, Desarrolladora
             Backend especializada en <b className="purple">Java</b>,{" "}
             <b className="purple">Spring Boot</b> y{" "}

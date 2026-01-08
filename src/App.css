@@ -1297,6 +1297,10 @@ button:focus {
         padding-top: 0 !important;
     }
 
+    .about-card-text {
+        text-align: center !important;
+    }
+
     /* Resume Section */
     .resume-left {
         padding-right: 15px !important;
