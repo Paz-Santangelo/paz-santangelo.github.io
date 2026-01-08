@@ -9,7 +9,7 @@ import "react-pdf/dist/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 // Ruta al PDF en la carpeta public
-const pdf = "/assets/CV-PazSantangelo-Backend.pdf";
+const pdf = "/assets/CV_María_Paz_Santangelo_2026.pdf";
 
 const ResumeNew = () => {
   const [width, setWidth] = useState(() => window.innerWidth);

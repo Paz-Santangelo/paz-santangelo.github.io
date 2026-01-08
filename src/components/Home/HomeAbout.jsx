@@ -35,7 +35,7 @@ const HomeAbout = () => {
               <b className="purple">microservicios con Spring Cloud</b>,
               estudiando <b className="purple">Spring Security</b> y, además,
               tengo conocimientos complementarios en{" "}
-              <b className="purple">React.js, Material UI y Bootstrap</b>, que
+              <b className="purple">React.js, Redux, Material UI y Bootstrap</b>, que
               me permiten entender el frontend desde el backend.
               <br />
               <br />
